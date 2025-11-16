@@ -1,0 +1,10 @@
+    repos:
+      - repo: local
+        hooks:
+          - id: pylint
+            name: pylint
+            entry: pylint
+            language: system
+            types: [python]
+            require_serial: true # Recommended for Pylint's accuracy
+            args: [--rcfile=.pylintrc] # Optional: specify a custom Pylint configuration file
