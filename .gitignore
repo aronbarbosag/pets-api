@@ -2,6 +2,6 @@ venv
 storage.db
 **/__pycache__
 .pytest_cache
-PROJECT_DOCS.v20251202120000
-PROJECT_DOCS
-.vscode
+PROJECT_DOCS.v20251202120000.md
+PROJECT_DOCS.md
+**/.vscode
