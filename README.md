@@ -4,12 +4,6 @@ API REST em Flask para gerenciamento de pets e pessoas.
 
 ---
 
-# 🐾 API de Gerenciamento de Pets e Pessoas
-
-API REST em Flask para gerenciamento de pets e pessoas.
-
----
-
 ## 🚀 Como Rodar
 
 ### Opção 1: Usando UV (Recomendado) ⚡
