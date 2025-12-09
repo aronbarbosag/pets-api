@@ -1,4 +1,5 @@
 from src.models.sqlite.interfaces.pets_repository import PetsRepositoryInterface
+
 from .interfaces.pet_deleter_controller import PetDeleterControllerInterface
 
 

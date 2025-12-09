@@ -1,10 +1,9 @@
-    repos:
-      - repo: local
-        hooks:
-          - id: pylint
-            name: pylint
-            entry: pylint
-            language: system
-            types: [python]
-            require_serial: true # Recommended for Pylint's accuracy
-            args: [--rcfile=.pylintrc] # Optional: specify a custom Pylint configuration file
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.4
+    hooks:
+      # Ruff linter
+      - id: ruff
+        args: [--fix]
+      # Ruff formatter
+      - id: ruff-format

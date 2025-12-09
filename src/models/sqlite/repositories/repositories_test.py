@@ -1,7 +1,9 @@
 import pytest
+
 from src.models.sqlite.settings.connection import db_connection_handler
-from .pets_repository import PetsRepository
+
 from .people_repository import PeopleRepository
+from .pets_repository import PetsRepository
 
 
 @pytest.mark.skip(reason="interacao com o banco")

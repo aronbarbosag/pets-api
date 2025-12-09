@@ -13,7 +13,10 @@ class MockPerson:
 class MockPeopleRepository:
     def get_person(self, person_id: int):
         return MockPerson(
-            first_name="John", last_name="Doe", pet_name="Fluffy", pet_type="cat"
+            first_name="John",
+            last_name="Doe",
+            pet_name="Fluffy",
+            pet_type="cat",
         )
 
 
@@ -31,6 +34,6 @@ def test_find():
                 "pet_name": "Fluffy",
                 "pet_type": "cat",
             },
-        }
+        },
     }
     assert response == expected_response

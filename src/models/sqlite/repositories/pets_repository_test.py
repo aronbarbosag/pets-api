@@ -1,8 +1,11 @@
 from unittest import mock
+
 import pytest
 from mock_alchemy.mocking import UnifiedAlchemyMagicMock
 from sqlalchemy.orm.exc import NoResultFound
+
 from src.models.sqlite.entities.pets import PetsTable
+
 from .pets_repository import PetsRepository
 
 
@@ -16,8 +19,8 @@ class MockConnection:
                         PetsTable(name="dog", type="dog"),
                         PetsTable(name="cat", type="cat"),
                     ],
-                )
-            ]
+                ),
+            ],
         )
 
     def __enter__(self):
@@ -81,7 +84,7 @@ def test_delete_pet_error():
     mock_connection = MockConnectionNoResult()
     repo = PetsRepository(mock_connection)
 
-    with pytest.raises(Exception):
+    with pytest.raises(NoResultFound):
         repo.delete_pet("petName")
 
     mock_connection.session.rollback.assert_called_once()
