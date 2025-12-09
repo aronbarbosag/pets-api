@@ -4,9 +4,38 @@ API REST em Flask para gerenciamento de pets e pessoas.
 
 ---
 
+# 🐾 API de Gerenciamento de Pets e Pessoas
+
+API REST em Flask para gerenciamento de pets e pessoas.
+
+---
+
 ## 🚀 Como Rodar
 
-### 1. Criar e ativar ambiente virtual
+### Opção 1: Usando UV (Recomendado) ⚡
+
+```bash
+# Instalar UV (caso não tenha)
+# Windows (PowerShell)
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+# Linux/Mac
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Sincronizar dependências (cria .venv automaticamente)
+uv sync
+
+# Rodar o servidor
+uv run python run.py
+
+# Rodar testes
+uv run pytest -s -v
+
+# Verificar código com Ruff
+uv run ruff check src/
+```
+
+### Opção 2: Usando venv tradicional
 
 ```powershell
 # Criar ambiente
@@ -17,24 +46,43 @@ python -m venv venv
 
 # Ativar (Linux/Mac)
 source venv/bin/activate
-```
 
-### 2. Instalar dependências
-
-```bash
+# Instalar dependências
 pip install -r requirements.txt
-```
 
-### 3. Criar banco de dados
-
-```bash
-sqlite3 storage.db < init/schema.sql
-```
-
-### 4. Rodar o servidor
-
-```bash
+# Rodar o servidor
 python run.py
+```
+
+### 🛠️ Comandos Úteis com UV
+
+```bash
+# Adicionar nova dependência
+uv add <package-name>
+
+# Adicionar dependência de desenvolvimento
+uv add --dev <package-name>
+
+# Remover dependência
+uv remove <package-name>
+
+# Atualizar todas as dependências
+uv sync --upgrade
+
+# Rodar script Python
+uv run python script.py
+
+# Rodar testes
+uv run pytest
+
+# Formatar código
+uv run ruff format src/
+
+# Verificar código
+uv run ruff check src/
+
+# Executar pre-commit manualmente
+uv run pre-commit run --all-files
 ```
 
 O servidor iniciará em: `http://localhost:3000`

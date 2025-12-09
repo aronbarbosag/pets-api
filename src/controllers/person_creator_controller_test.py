@@ -1,4 +1,7 @@
 import pytest
+
+from src.errors.error_types.http_bad_request import HttpBadRequestError
+
 from .person_creator_controller import PersonCreatorController
 
 
@@ -32,5 +35,5 @@ def test_create_error():
     }
 
     controller = PersonCreatorController(MockPeopleRepository())
-    with pytest.raises(Exception):
+    with pytest.raises(HttpBadRequestError):
         controller.create(person_infor)

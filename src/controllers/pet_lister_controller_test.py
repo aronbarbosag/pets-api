@@ -1,4 +1,5 @@
 from src.models.sqlite.entities.pets import PetsTable
+
 from .pet_lister_controller import PetListerController
 
 
@@ -19,6 +20,6 @@ def test_list_pets():
             "type": "Pets",
             "count": 2,
             "attributes": [{"name": "Fluffy", "id": 4}, {"name": "Buddy", "id": 47}],
-        }
+        },
     }
     assert response == expected_response

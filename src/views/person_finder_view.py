@@ -1,8 +1,9 @@
-from src.views.http_types.http_request import HttpRequest
-from src.views.http_types.http_response import HttpResponse
 from src.controllers.interfaces.person_finder_controller import (
     PersonFinderControllerInterface,
 )
+from src.views.http_types.http_request import HttpRequest
+from src.views.http_types.http_response import HttpResponse
+
 from .interfaces.view_interface import ViewInterface
 
 

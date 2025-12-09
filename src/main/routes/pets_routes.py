@@ -1,7 +1,8 @@
 from flask import Blueprint, jsonify
-from src.views.http_types.http_request import HttpRequest
-from src.main.composer.pet_lister_composer import pet_lister_composer
+
 from src.main.composer.pet_deleter_composer import pet_deleter_composer
+from src.main.composer.pet_lister_composer import pet_lister_composer
+from src.views.http_types.http_request import HttpRequest
 
 pet_route_bp = Blueprint("pets_routes", __name__)
 

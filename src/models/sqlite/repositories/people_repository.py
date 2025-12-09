@@ -1,4 +1,5 @@
 from sqlalchemy.orm.exc import NoResultFound
+
 from src.models.sqlite.entities.people import People
 from src.models.sqlite.entities.pets import PetsTable
 from src.models.sqlite.interfaces.people_repository import PeopleRepositoryInterface
@@ -9,12 +10,19 @@ class PeopleRepository(PeopleRepositoryInterface):
         self.__db_connection = db_connection
 
     def insert_person(
-        self, first_name: str, last_name: str, age: int, pet_id: int
+        self,
+        first_name: str,
+        last_name: str,
+        age: int,
+        pet_id: int,
     ) -> None:
         with self.__db_connection as database:
             try:
                 person_data = People(
-                    first_name=first_name, last_name=last_name, age=age, pet_id=pet_id
+                    first_name=first_name,
+                    last_name=last_name,
+                    age=age,
+                    pet_id=pet_id,
                 )
                 database.session.add(person_data)
                 database.session.commit()
