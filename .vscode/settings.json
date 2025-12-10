@@ -10,5 +10,8 @@
     "**/__pycache__": true,
     "**/.pytest_cache": true
   },
-  "python-envs.pythonProjects": []
+  "python-envs.pythonProjects": [],
+  
+  // Hover fecha automaticamente ao clicar fora ou digitar
+  "editor.hover.sticky": false
 }

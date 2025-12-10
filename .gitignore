@@ -8,3 +8,4 @@ PROJECT_DOCS.md
 **/.vscode
 *.egg-info
 uv.lock
+.ruff_cache
