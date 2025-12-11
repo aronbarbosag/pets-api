@@ -1,5 +1,4 @@
 annotated-types==0.7.0
--e file:///D:/Projetos%20Python/py/curso_python_rockeseat/arquitetura_de_software
 astroid==4.0.2
 blinker==1.9.0
 cfgv==3.5.0
